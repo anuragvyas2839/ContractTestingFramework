@@ -1,0 +1,56 @@
+{
+  "consumer": {
+    "name": "DisplayUserConsumer"
+  },
+  "provider": {
+    "name": "GetUserProvider"
+  },
+  "interactions": [
+    {
+      "description": "a request for get User2 details",
+      "providerState": "User with user id 2 exists in database table user_details",
+      "request": {
+        "method": "get",
+        "path": "/api/user/2"
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+        },
+        "body": {
+          "data": {
+            "id": 2,
+            "email": "janet.weaver@reqres.in",
+            "first_name": "Janet",
+            "last_name": "Weaver",
+            "avatar": "https://reqres.in/img/faces/2-image.jpg"
+          },
+          "support": {
+            "url": "https://reqres.in/#support-heading",
+            "text": "To keep ReqRes free, contributions towards server costs are appreciated!"
+          }
+        }
+      }
+    },
+    {
+      "description": "a request for get user with string as user id",
+      "providerState": "Provider only allows int user ids",
+      "request": {
+        "method": "get",
+        "path": "/api/user/abcd"
+      },
+      "response": {
+        "status": 400,
+        "headers": {
+        },
+        "body": {
+        }
+      }
+    }
+  ],
+  "metadata": {
+    "pactSpecification": {
+      "version": "2.0.0"
+    }
+  }
+}

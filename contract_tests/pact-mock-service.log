@@ -1,0 +1,108 @@
+I, [2022-06-26T16:26:58.214397 #32250]  INFO -- : Cleared interactions
+I, [2022-06-26T16:26:58.219792 #32250]  INFO -- : Registered expected interaction GET /api/user/2
+D, [2022-06-26T16:26:58.219925 #32250] DEBUG -- : {
+  "description": "a request for get User2 details",
+  "providerState": "User with user id 2 exists in database table user_details",
+  "request": {
+    "method": "get",
+    "path": "/api/user/2"
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+    },
+    "body": {
+      "data": {
+        "id": 2,
+        "email": "janet.weaver@reqres.in",
+        "first_name": "Janet",
+        "last_name": "Weaver",
+        "avatar": "https://reqres.in/img/faces/2-image.jpg"
+      },
+      "support": {
+        "url": "https://reqres.in/#support-heading",
+        "text": "To keep ReqRes free, contributions towards server costs are appreciated!"
+      }
+    }
+  },
+  "metadata": null
+}
+I, [2022-06-26T16:26:58.224638 #32250]  INFO -- : Received request GET /api/user/2
+D, [2022-06-26T16:26:58.224724 #32250] DEBUG -- : {
+  "path": "/api/user/2",
+  "query": "",
+  "method": "get",
+  "headers": {
+    "Content-Type": "application/json",
+    "Host": "localhost:1234",
+    "User-Agent": "python-requests/2.27.1",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Accept": "*/*",
+    "Connection": "keep-alive",
+    "Version": "HTTP/1.1"
+  }
+}
+I, [2022-06-26T16:26:58.225370 #32250]  INFO -- : Found matching response for GET /api/user/2
+D, [2022-06-26T16:26:58.225475 #32250] DEBUG -- : {
+  "status": 200,
+  "headers": {
+  },
+  "body": {
+    "data": {
+      "id": 2,
+      "email": "janet.weaver@reqres.in",
+      "first_name": "Janet",
+      "last_name": "Weaver",
+      "avatar": "https://reqres.in/img/faces/2-image.jpg"
+    },
+    "support": {
+      "url": "https://reqres.in/#support-heading",
+      "text": "To keep ReqRes free, contributions towards server costs are appreciated!"
+    }
+  }
+}
+I, [2022-06-26T16:26:58.229379 #32250]  INFO -- : Verifying - interactions matched
+I, [2022-06-26T16:26:58.233145 #32250]  INFO -- : Writing pact for GetUserProvider to /Users/avyas/PycharmProjects/ContractTestingFramework/contract_tests/displayuserconsumer-getuserprovider.json
+I, [2022-06-26T16:26:58.237322 #32250]  INFO -- : Cleared interactions
+I, [2022-06-26T16:26:58.240945 #32250]  INFO -- : Registered expected interaction GET /api/user/abcd
+D, [2022-06-26T16:26:58.241010 #32250] DEBUG -- : {
+  "description": "a request for get user with string as user id",
+  "providerState": "Provider only allows int user ids",
+  "request": {
+    "method": "get",
+    "path": "/api/user/abcd"
+  },
+  "response": {
+    "status": 400,
+    "headers": {
+    },
+    "body": {
+    }
+  },
+  "metadata": null
+}
+I, [2022-06-26T16:26:58.244623 #32250]  INFO -- : Received request GET /api/user/abcd
+D, [2022-06-26T16:26:58.244715 #32250] DEBUG -- : {
+  "path": "/api/user/abcd",
+  "query": "",
+  "method": "get",
+  "headers": {
+    "Content-Type": "application/json",
+    "Host": "localhost:1234",
+    "User-Agent": "python-requests/2.27.1",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Accept": "*/*",
+    "Connection": "keep-alive",
+    "Version": "HTTP/1.1"
+  }
+}
+I, [2022-06-26T16:26:58.244796 #32250]  INFO -- : Found matching response for GET /api/user/abcd
+D, [2022-06-26T16:26:58.244845 #32250] DEBUG -- : {
+  "status": 400,
+  "headers": {
+  },
+  "body": {
+  }
+}
+I, [2022-06-26T16:26:58.248214 #32250]  INFO -- : Verifying - interactions matched
+I, [2022-06-26T16:26:58.251664 #32250]  INFO -- : Writing pact for GetUserProvider to /Users/avyas/PycharmProjects/ContractTestingFramework/contract_tests/displayuserconsumer-getuserprovider.json
