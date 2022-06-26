@@ -17,6 +17,6 @@ Command : python <path to file inside contract_tests>
   
 ## Output:       
 Generates pact file in json format.       
-File naming convention : <consumer>-<provider>.json         
+File naming convention : \<consumer\>-\<provider\>.json         
              
 
